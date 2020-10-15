@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="简体中文">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mac文件操作常用命令 | Sarmay的个人博客</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/images/logo.jpg">
+    <meta name="description" content="你这里可以学到很多有趣的知识">
+    <link rel="preload" href="/assets/css/0.styles.c08026f3.css" as="style"><link rel="preload" href="/assets/js/app.eacb9a3b.js" as="script"><link rel="preload" href="/assets/js/3.cc61e45a.js" as="script"><link rel="preload" href="/assets/js/2.ab83f102.js" as="script"><link rel="preload" href="/assets/js/10.8628b813.js" as="script"><link rel="prefetch" href="/assets/js/11.e088a4bc.js"><link rel="prefetch" href="/assets/js/12.0b0e3ada.js"><link rel="prefetch" href="/assets/js/13.d16f0d80.js"><link rel="prefetch" href="/assets/js/14.d7a1cbac.js"><link rel="prefetch" href="/assets/js/15.ed5fbd0c.js"><link rel="prefetch" href="/assets/js/16.dd9a14d4.js"><link rel="prefetch" href="/assets/js/17.75201967.js"><link rel="prefetch" href="/assets/js/18.1cbdefb1.js"><link rel="prefetch" href="/assets/js/19.e78bb6fc.js"><link rel="prefetch" href="/assets/js/20.c20236b7.js"><link rel="prefetch" href="/assets/js/21.7d857103.js"><link rel="prefetch" href="/assets/js/22.6050c931.js"><link rel="prefetch" href="/assets/js/23.693c2848.js"><link rel="prefetch" href="/assets/js/24.c615da08.js"><link rel="prefetch" href="/assets/js/4.8fe38ee6.js"><link rel="prefetch" href="/assets/js/5.9d905708.js"><link rel="prefetch" href="/assets/js/6.3e468fa8.js"><link rel="prefetch" href="/assets/js/7.578389d4.js"><link rel="prefetch" href="/assets/js/8.556a1282.js"><link rel="prefetch" href="/assets/js/9.2a193b0f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c08026f3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container reform no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="Sarmay的个人博客" class="logo"> <span class="site-name can-hide">Sarmay的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><span class="reform-jia" style="font-size:1rem;"></span>
+主页</a></div><div class="nav-item"><a href="/tags/" class="nav-link"><span class="reform-binggun" style="font-size:1rem;"></span>
+标签云</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="reform-jiqiren"></span> <span class="title">博文</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/frontend/" class="nav-link"><span class="reform-qiehuan" style="font-size:1rem;"></span>
+前端</a></li><li class="dropdown-item"><!----> <a href="/blog/backend/" class="nav-link router-link-active"><span class="reform-shubiao" style="font-size:1rem;"></span>
+后端</a></li><li class="dropdown-item"><!----> <a href="/blog/server/" class="nav-link"><span class="reform-yuanxing" style="font-size:1rem;"></span>
+服务器</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link"><span class="reform-haoyou" style="font-size:1rem;"></span>
+关于我</a></div><div class="nav-item"><a href="http://www.sarmay.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><!----> <span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/backend/MacCommonCommands.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><!---->
+简体中文</a></li><li class="dropdown-item"><!----> <a href="/kz/" class="nav-link"><!---->
+Қазақша</a></li></ul></div></div> <a href="https://github.com/sarmay" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><span class="reform-jia" style="font-size:1rem;"></span>
+主页</a></div><div class="nav-item"><a href="/tags/" class="nav-link"><span class="reform-binggun" style="font-size:1rem;"></span>
+标签云</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="reform-jiqiren"></span> <span class="title">博文</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/frontend/" class="nav-link"><span class="reform-qiehuan" style="font-size:1rem;"></span>
+前端</a></li><li class="dropdown-item"><!----> <a href="/blog/backend/" class="nav-link router-link-active"><span class="reform-shubiao" style="font-size:1rem;"></span>
+后端</a></li><li class="dropdown-item"><!----> <a href="/blog/server/" class="nav-link"><span class="reform-yuanxing" style="font-size:1rem;"></span>
+服务器</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link"><span class="reform-haoyou" style="font-size:1rem;"></span>
+关于我</a></div><div class="nav-item"><a href="http://www.sarmay.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><!----> <span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/backend/MacCommonCommands.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><!---->
+简体中文</a></li><li class="dropdown-item"><!----> <a href="/kz/" class="nav-link"><!---->
+Қазақша</a></li></ul></div></div> <a href="https://github.com/sarmay" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Mac文件操作常用命令</span> <!----></p> <!----></section></li></ul> </aside> <main class="page" data-v-4295b1aa> <section class="tags" data-v-4295b1aa><span class="tagPopup" data-v-4295b1aa><a href="/tags/?tag=MacOS" class="tag" data-v-4295b1aa>MacOS</a></span><span class="tagPopup" data-v-4295b1aa><a href="/tags/?tag=%E6%96%87%E4%BB%B6" class="tag" data-v-4295b1aa>文件</a></span><span class="tagPopup" data-v-4295b1aa><a href="/tags/?tag=%E6%96%87%E4%BB%B6%E5%A4%B9" class="tag" data-v-4295b1aa>文件夹</a></span><span class="tagPopup" data-v-4295b1aa><a href="/tags/?tag=%E5%91%BD%E4%BB%A4" class="tag" data-v-4295b1aa>命令</a></span><span class="tagPopup" data-v-4295b1aa><a href="/tags/?tag=%E5%BF%AB%E6%8D%B7" class="tag" data-v-4295b1aa>快捷</a></span></section> <div class="content theme-default-content content__default" data-v-4295b1aa><h1 id="macos-文件操作常用命令"><a href="#macos-文件操作常用命令" class="header-anchor">#</a> MacOS 文件操作常用命令 👋</h1> <ol><li>显示当前目录的路径</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    显示当前目录的路径<span class="token punctuation">(</span>让你实时查看当前所处的路径<span class="token punctuation">)</span>
+    <span class="token builtin class-name">pwd</span>
+</code></pre></div><ol start="2"><li>查看当前目录下的内容(让你实时查看当前路径下的内容)</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">ls</span> 参数 目录名
+    参数: -w 显示中文，-l 详细信息， -a 包括隐藏文件，
+    每一行开头是 “d” 则为文件夹，开头是 “-” 则为文件。
+    <span class="token function">ls</span>                 显示在当前目录下的所有文件或文件夹
+    <span class="token function">ls</span> + 目录          显示在该目录下的所有文件或文件夹
+    <span class="token function">ls</span> + 空格 +   -a   显示当前目录下隐藏文件
+    <span class="token function">ls</span> + 空格 +   -l   显示当前目录下详细信息
+    <span class="token function">ls</span> + 空格 +   -R   显示当前目录下子目录文件      
+    <span class="token function">ls</span> + 空格 +  -w    显示当前目录下中文文件
+    <span class="token function">ls</span> + 空格 +  -la   显示所有文件
+    例: 看看驱动目录下有什么：ls /System/Library/Extensions
+
+</code></pre></div><ol start="3"><li>切换路径(也可称为转化目录) 就是将从一个路径中,进入到另外一个路径</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token builtin class-name">cd</span> 目录名
+    <span class="token builtin class-name">cd</span> <span class="token builtin class-name">.</span>                      表示当前目录
+    <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>                     表示返回上一级目录
+    <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/<span class="token punctuation">..</span>                  表示返回上两级
+    <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/<span class="token punctuation">..</span> /<span class="token punctuation">..</span>              表示返回上三级目录
+    <span class="token builtin class-name">cd</span>  + 空格 + 下一目录  表示将从当前路径进入到下一目录
+    <span class="token builtin class-name">cd</span>  + 空格 + 〜            表示从当前目录进入到用户根目录
+    <span class="token builtin class-name">cd</span>  + 空格  + /            表示从当前目录进入根目录
+    <span class="token builtin class-name">cd</span>  + 空格 + ./            表示从当前目录进入到当前目录<span class="token punctuation">(</span>一个点<span class="token string">&quot;.&quot;</span> 表示当前<span class="token punctuation">)</span>
+    例：想到驱动目录下溜达一圈：cd /System/Library/Extensions
+
+</code></pre></div><ol start="4"><li>建立新目录(也可理解为创建文件夹)</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">mkdir</span> 目录名
+    <span class="token function">mkdir</span> + 空格 +文件夹名       表示创建一个文件夹
+    <span class="token function">mkdir</span> + 空格 + 绝对路径      表示创建一个文件夹和上面的功能相同,
+    只不过上面是通过相对路径创建, 下面是通过绝对路径创建.
+    例：在驱动目录下建一个备份目录 backup：mkdir /System/Library/Extensions/backup
+
+</code></pre></div><ol start="5"><li>删除目录(也可理解为删除文件夹)</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">rmdir</span> 目录名
+    <span class="token function">rmdir</span> + 空格 + 文件夹名      表示删除一个文件夹
+    <span class="token function">rmdir</span> + 空格 + 绝对路径      表示删除一个文件夹和上面的功能相同,只不过上面是通过相对路径删除,下面是通过绝对路径删除
+    例：在桌面删除一个叫new的文件  MacBook-Air:Desktop admin$ <span class="token function">rmdir</span>  new
+</code></pre></div><ol start="6"><li>建立新文件</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">touch</span> 文件名        
+    例：在当前目录下建一个备份文件 backup：touch backup.txt
+</code></pre></div><ol start="7"><li>删除文件</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">rm</span>  参数 文件 参数－rf          表示递归和强制，千万要小心使用，如果执行了 <span class="token function">rm</span> -rf /
+    你的系统就全没了 
+    <span class="token function">rm</span>  + 空格 + 文件名和格式        表示删除一个文件
+    <span class="token function">rm</span>   + -r    + 文件夹          表示强制删除文件夹中包含文件的文件夹
+    <span class="token punctuation">(</span>当文件夹中包含有文件, 通过<span class="token string">&quot;rmdir + 空格+ 文件夹名&quot;</span>的方式                                   是删不掉文件夹的,只有通过<span class="token string">&quot;rm + -f + 文件夹名&quot;</span>,进行强制删除<span class="token punctuation">)</span>
+    <span class="token function">rm</span>   + -rf   + 文件夹          表示强制删除文件夹中包含文件的文件夹
+    <span class="token punctuation">(</span>和<span class="token string">&quot;rm + -r + 文件夹名&quot;</span> 功能相同<span class="token punctuation">)</span>
+    注意: <span class="token function">rm</span> 可以删除多个文件而不止一个文件 ,但是两个文件的路径必须用空格隔开.
+    例：想删除驱动的缓存：rm -rf /System/Library/Extensions.kextcache                                                    <span class="token function">rm</span> -rf /System/Library/Extensions.mkext  
+</code></pre></div><ol start="8"><li>拷贝</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">cp</span> 参数 源文件 目标文件
+    例：想把桌面的 Natit.kext 拷贝到驱动目录中  <span class="token function">cp</span> -R /User/用户名/Desktop/Natit.kext  /System/Library/Extensions
+    参数 R 表示对目录进行递归操作，kext 在图形界面下看起来是个文件，实际上是个文件夹。
+    把驱动目录下的所有文件备份到桌面 backup：cp -R /System/Library/Extensions/
+    /User/用户名/Desktop/backup
+</code></pre></div><ol start="9"><li>移动文件和重命名文件</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">mv</span> 源文件 目标文件
+    <span class="token function">mv</span> + 需要移动的文件或文件夹 + 空格 + 移动到的路径<span class="token punctuation">(</span>这里路径可以是相对路径,也可以是绝对
+    路径<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">mv</span> + a.c + 空格 +b.c 表示将a.c 重命名为b.c
+    例：想把 AppleHDA.Kext 移到桌面：
+    <span class="token function">mv</span> /System/Library/Extensions/AppleHDA.kext  /User/用户名/Desktop
+</code></pre></div><ol start="10"><li>文本编辑</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">vim</span> 文件名
+    <span class="token function">vim</span> + 文件名 表示编辑文件内容
+    例：  
+    <span class="token function">vim</span> /System/Library/Extensions/Natit.kext/Info.plist 
+    编辑完成后 用 Ctrl ＋O 存盘，Ctrl＋X 退出 
+    注意:
+  * 在默认的<span class="token string">&quot;指令模式&quot;</span>下按 i 进入编辑模式 
+  * 在非指令模式下按 ESC 返回指令模式 
+  * 在<span class="token string">&quot;指令模式&quot;</span>下输入: 
+    :w  保存当前文件 
+    :q 退出编辑,如果文件为保存需要用强制模式 
+    :q<span class="token operator">!</span>	强制退出不保存修改 
+    :wq	组合指令, 保存并退出 
+  * 在<span class="token string">&quot;指令模式&quot;</span>下移动: 
+    h	左 
+    j	下 
+    k	上 
+    l	右 
+</code></pre></div><ol start="11"><li>清屏</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>    <span class="token function">clear</span>
+</code></pre></div><ol start="12"><li>打开某个文件,文件夹或应用</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">open</span>
+  * 如果是open .则是打开当前命令里的目录，如果要打开指定的文件夹或者文件则格式为open 要打开的路径即可。<span class="token punctuation">(</span>这里绝对路径或相对路径都可以<span class="token punctuation">)</span>
+  * open命令可以在终端中开启应用，使用-n可以开启多个相同应用。比如你可以使用下面的命令开启新Safari窗口
+    <span class="token function">open</span> -n /Applications/Safari.app/
+</code></pre></div></div> <footer class="page-edit" data-v-4295b1aa><!----> <div class="last-updated" data-v-4295b1aa><span class="prefix" data-v-4295b1aa>最后更新时间:</span> <span class="time" data-v-4295b1aa>2020-10-15 17:36:20 星期四</span></div></footer> <!----> <div id="gitalk-container" data-v-4295b1aa></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eacb9a3b.js" defer></script><script src="/assets/js/3.cc61e45a.js" defer></script><script src="/assets/js/2.ab83f102.js" defer></script><script src="/assets/js/10.8628b813.js" defer></script>
+  </body>
+</html>
