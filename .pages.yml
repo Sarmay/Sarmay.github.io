@@ -1,0 +1,97 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: articles
+    label: 文章
+    type: collection
+    path: content/articles
+    filename:
+      template: "{fields.slug}.md"
+      field: false
+    view:
+      fields: [title, language, category, published, date]
+      primary: title
+      sort: [date, title]
+      search: [title, description, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: slug
+        label: URL 标识
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: 只能使用小写英文字母、数字和连字符
+        description: 发布后用于文章网址，例如 my-first-post
+      - name: description
+        label: 摘要
+        type: text
+        required: true
+        options:
+          minlength: 10
+          maxlength: 240
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: language
+        label: 语言
+        type: select
+        required: true
+        default: zh
+        options:
+          values:
+            - name: zh
+              label: 简体中文
+            - name: kz
+              label: Қазақша
+            - name: qaz
+              label: قازاقشا
+      - name: category
+        label: 分类
+        type: select
+        required: true
+        default: frontend
+        options:
+          values:
+            - name: frontend
+              label: 前端
+            - name: backend
+              label: 后端
+            - name: server
+              label: 服务器
+      - name: tags
+        label: 标签
+        type: string
+        description: 多个标签使用英文逗号分隔
+      - name: cover
+        label: 封面图片
+        type: image
+        options:
+          path: images/uploads
+          categories: [image]
+          rename: safe
+      - name: translation_key
+        label: 翻译关联标识
+        type: string
+        description: 同一文章的三种语言填写相同值即可互相切换
+      - name: published
+        label: 立即发布
+        type: boolean
+        default: true
+      - name: body
+        label: 正文
+        type: rich-text
+        required: true

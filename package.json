@@ -1,0 +1,22 @@
+{
+  "name": "sarmay-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "build:preview": "node scripts/build-site.mjs --output dist-preview --include-drafts",
+    "check": "node scripts/validate-content.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/serve-site.mjs dist",
+    "preview:drafts": "node scripts/serve-site.mjs dist-preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "js-yaml": "^4.3.0",
+    "markdown-it": "^14.3.0"
+  }
+}
