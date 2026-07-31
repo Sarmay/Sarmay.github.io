@@ -1,0 +1,219 @@
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar .logo {
+  margin-right: 0;
+  margin-left: 0.8rem;
+}
+
+html[dir="rtl"] .navbar .links {
+  right: auto;
+  left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .nav-links .nav-item {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .nav-links .nav-item:first-child {
+  margin-right: 0;
+}
+
+html[dir="rtl"] .nav-links .repo-link {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .search-box {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .search-box input {
+  direction: rtl;
+  padding-right: 2rem;
+  padding-left: 0.5rem;
+  background-position: calc(100% - 0.6rem) 0.5rem;
+}
+
+html[dir="rtl"] .search-box .suggestions,
+html[dir="rtl"] .search-box .suggestions.align-right {
+  right: auto;
+  left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .search-box .suggestion a .header {
+  margin-right: 0.25em;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .dropdown-wrapper .nav-dropdown {
+  right: auto;
+  left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .dropdown-wrapper .nav-dropdown .dropdown-item a,
+html[dir="rtl"] .dropdown-wrapper .nav-dropdown .dropdown-item h4 {
+  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+html[dir="rtl"] .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
+  right: 9px;
+  left: auto;
+  border-right: 5px solid #2196f3;
+  border-left: 0;
+}
+
+html[dir="rtl"] .sidebar {
+  right: 0;
+  left: auto;
+  border-right: 0;
+  border-left: 1px solid #eaecef;
+}
+
+html[dir="rtl"] .page {
+  padding-right: 20rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .sidebar-heading,
+html[dir="rtl"] a.sidebar-link {
+  border-right: 0.25rem solid transparent;
+  border-left: 0;
+}
+
+html[dir="rtl"] .sidebar-heading.clickable.active,
+html[dir="rtl"] a.sidebar-link.active {
+  border-right-color: #2196f3;
+}
+
+html[dir="rtl"] .sidebar-heading {
+  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+html[dir="rtl"] .sidebar-heading .arrow {
+  right: 0.5em;
+  left: auto;
+}
+
+html[dir="rtl"] .sidebar-group a.sidebar-link {
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
+html[dir="rtl"] .sidebar-group .sidebar-group,
+html[dir="rtl"] .sidebar-group.is-sub-group > .sidebar-group-items,
+html[dir="rtl"] .sidebar .sidebar-sub-headers {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .sidebar .nav-links .nav-item,
+html[dir="rtl"] .sidebar .nav-links .repo-link {
+  margin-right: 0;
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] blockquote,
+html[dir="rtl"] .markdown-body blockquote {
+  border-right: 0.25em solid #dfe2e5;
+  border-left: 0;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] a.header-anchor {
+  float: right;
+  margin-right: -0.87em;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0.23em;
+}
+
+html[dir="rtl"] .page-edit .last-updated[data-v-4295b1aa] {
+  float: left;
+  text-align: right;
+}
+
+html[dir="rtl"] pre,
+html[dir="rtl"] code,
+html[dir="rtl"] .code-copy-added {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] #nprogress .bar {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] #nprogress .peg {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 959px) {
+  html[dir="rtl"] .page {
+    padding-right: 16.4rem;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  html[dir="rtl"] .theme-container.no-sidebar .page {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 719px) {
+  html[dir="rtl"] .navbar {
+    padding-right: 4rem;
+    padding-left: 1.5rem;
+  }
+
+  html[dir="rtl"] .navbar .links {
+    padding-right: 1.5rem;
+    padding-left: 0;
+  }
+
+  html[dir="rtl"] .sidebar-button {
+    right: 1rem;
+    left: auto;
+  }
+
+  html[dir="rtl"] .sidebar {
+    transform: translateX(100%);
+  }
+
+  html[dir="rtl"] .theme-container.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  html[dir="rtl"] .page {
+    padding-right: 0;
+  }
+
+  html[dir="rtl"] .nav-links .nav-item,
+  html[dir="rtl"] .nav-links .repo-link {
+    margin-right: 0;
+  }
+
+  html[dir="rtl"] .search-box {
+    margin-left: 0;
+  }
+
+  html[dir="rtl"] .search-box input {
+    right: 1rem;
+    left: auto;
+  }
+}
