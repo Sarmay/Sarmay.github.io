@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import {
   existsSync,
   mkdtempSync,
+  mkdirSync,
   readFileSync,
   rmSync,
   writeFileSync,
@@ -14,6 +15,21 @@ import { buildSite } from "../scripts/build-site.mjs";
 import { loadArticles, normalizeTags } from "../scripts/content-model.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+function writeArticleFixture(contentDir, { slug, title, published }) {
+  writeFileSync(join(contentDir, `${slug}.md`), `---
+title: ${title}
+slug: ${slug}
+description: A stable article fixture used by the content build tests.
+date: 2026-07-31
+language: zh
+category: frontend
+published: ${published}
+---
+
+Fixture body for ${title}.
+`);
+}
 
 test("normalizes comma-separated and repeated tags", () => {
   assert.deepEqual(normalizeTags("CMS, GitHub Pages, CMS"), ["CMS", "GitHub Pages"]);
@@ -46,21 +62,35 @@ Body
 
 test("builds legacy pages plus CMS articles and excludes drafts in production", () => {
   const temporaryRoot = mkdtempSync(join(tmpdir(), "sarmay-content-build-"));
+  const contentDir = join(temporaryRoot, "content");
   const previewOutput = join(temporaryRoot, "preview");
   const productionOutput = join(temporaryRoot, "production");
 
   try {
+    mkdirSync(contentDir);
+    writeArticleFixture(contentDir, {
+      slug: "fixture-published",
+      title: "Published fixture article",
+      published: true,
+    });
+    writeArticleFixture(contentDir, {
+      slug: "fixture-draft",
+      title: "Draft fixture article",
+      published: false,
+    });
+
     const preview = buildSite({
       siteRoot: root,
       outputDir: previewOutput,
+      contentDir,
       includeDrafts: true,
     });
-    assert.equal(preview.articleCount, 1);
+    assert.equal(preview.articleCount, 2);
     assert.ok(preview.legacyArticleCount >= 4);
 
-    const draftPage = join(previewOutput, "articles", "cms-example-draft", "index.html");
+    const draftPage = join(previewOutput, "articles", "fixture-draft", "index.html");
     assert.ok(existsSync(draftPage));
-    assert.match(readFileSync(draftPage, "utf8"), /使用网页后台发布第一篇文章/);
+    assert.match(readFileSync(draftPage, "utf8"), /Draft fixture article/);
 
     const qazaqshaIndex = readFileSync(join(previewOutput, "qaz", "articles", "index.html"), "utf8");
     assert.match(qazaqshaIndex, /<html lang="kk-Arab" dir="rtl">/);
@@ -73,15 +103,18 @@ test("builds legacy pages plus CMS articles and excludes drafts in production", 
     assert.match(frontendIndex, /自动化部署/);
     assert.doesNotMatch(frontendIndex, /assets\/js\/app\./);
 
-    buildSite({
+    const production = buildSite({
       siteRoot: root,
       outputDir: productionOutput,
+      contentDir,
       includeDrafts: false,
     });
-    assert.equal(existsSync(join(productionOutput, "articles", "cms-example-draft")), false);
+    assert.equal(production.articleCount, 1);
+    assert.ok(existsSync(join(productionOutput, "articles", "fixture-published", "index.html")));
+    assert.equal(existsSync(join(productionOutput, "articles", "fixture-draft")), false);
     assert.doesNotMatch(
       readFileSync(join(productionOutput, "articles", "index.html"), "utf8"),
-      /使用网页后台发布第一篇文章/,
+      /Draft fixture article/,
     );
   } finally {
     rmSync(temporaryRoot, { recursive: true, force: true });

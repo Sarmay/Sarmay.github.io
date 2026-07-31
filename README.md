@@ -108,21 +108,22 @@ npm run preview:drafts -- --port 4173
 - 中文文章：<http://127.0.0.1:4173/articles/>
 - Қазақша：<http://127.0.0.1:4173/kz/articles/>
 - قازاقشا：<http://127.0.0.1:4173/qaz/articles/>
-- 示例草稿：<http://127.0.0.1:4173/articles/cms-example-draft/>
+- 示例文章：<http://127.0.0.1:4173/articles/cms-example-draft/>
 
 不要直接双击 HTML 文件预览，站点资源使用根路径引用。
 
 ## 草稿与发布
 
-仓库包含一篇 `published: false` 的示例草稿：
+仓库包含一篇可在 Pages CMS 中直接编辑的示例文章：
 
 ```text
 content/articles/cms-example-draft.md
 ```
 
-- `npm run build` 和线上部署不会包含草稿。
+- 是否发布由文章的 `published` 字段决定；示例文章也可以自由切换状态。
+- `npm run build` 和线上部署不会包含 `published: false` 的草稿。
 - `npm run build:preview` 会生成草稿，便于本地检查。
-- 在 Pages CMS 中打开示例草稿，可以直接观察各字段如何填写。
+- 在 Pages CMS 中打开示例文章，可以直接观察各字段如何填写。
 
 ## Qazaqsha、RTL 与字体
 

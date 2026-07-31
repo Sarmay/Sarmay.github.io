@@ -114,10 +114,12 @@ function publicArticleData(article) {
 export function buildSite({
   siteRoot = scriptRoot,
   outputDir = join(scriptRoot, "dist"),
+  contentDir,
   includeDrafts = false,
 } = {}) {
   const root = resolve(siteRoot);
   const output = resolve(outputDir);
+  const articlesDirectory = resolve(contentDir ?? join(root, "content", "articles"));
   assertSafeOutput(root, output);
 
   rmSync(output, { recursive: true, force: true });
@@ -126,7 +128,7 @@ export function buildSite({
   injectLegacyNavigation(output);
 
   const articles = loadArticles({
-    contentDir: join(root, "content", "articles"),
+    contentDir: articlesDirectory,
     includeDrafts,
   });
   const legacyArticles = collectLegacyArticles(root);
