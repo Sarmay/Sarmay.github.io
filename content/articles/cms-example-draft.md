@@ -1,7 +1,7 @@
 ---
 title: 使用网页后台发布第一篇文章
 slug: cms-example-draft
-description: 这是一个不会出现在正式站点中的草稿，用于演示 Pages CMS 的文章字段和 Markdown 正文。
+description: 2n,这是一个不会出现在正式站点中的草稿，用于演示 Pages CMS 的文章字段和 Markdown 正文。
 date: 2026-07-31
 language: zh
 category: frontend
