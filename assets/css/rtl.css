@@ -1,6 +1,22 @@
+@font-face {
+  font-family: "ALKATIP Basma Tom";
+  src: url("../fonts/ALKATIPBasmaTom.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
 html[dir="rtl"] body {
+  font-family: "ALKATIP Basma Tom", "Noto Naskh Arabic", "Noto Sans Arabic", sans-serif;
   direction: rtl;
   text-align: right;
+}
+
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  font-family: inherit;
 }
 
 html[dir="rtl"] .navbar .logo {
