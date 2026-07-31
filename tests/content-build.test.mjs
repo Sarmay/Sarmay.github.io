@@ -98,6 +98,7 @@ test("builds legacy pages plus CMS articles and excludes drafts in production", 
 
     const legacyHome = readFileSync(join(previewOutput, "index.html"), "utf8");
     assert.match(legacyHome, /assets\/js\/content-navigation\.js/);
+    assert.match(legacyHome, /assets\/css\/content-site\.css\?v=/);
 
     const frontendIndex = readFileSync(join(previewOutput, "blog", "frontend", "index.html"), "utf8");
     assert.match(frontendIndex, /自动化部署/);
@@ -112,6 +113,11 @@ test("builds legacy pages plus CMS articles and excludes drafts in production", 
     assert.equal(production.articleCount, 1);
     assert.ok(existsSync(join(productionOutput, "articles", "fixture-published", "index.html")));
     assert.equal(existsSync(join(productionOutput, "articles", "fixture-draft")), false);
+    const articleFeed = JSON.parse(readFileSync(join(productionOutput, "articles.json"), "utf8"));
+    assert.deepEqual(
+      articleFeed.filter((article) => !article.legacy).map((article) => article.slug),
+      ["fixture-published"],
+    );
     assert.doesNotMatch(
       readFileSync(join(productionOutput, "articles", "index.html"), "utf8"),
       /Draft fixture article/,

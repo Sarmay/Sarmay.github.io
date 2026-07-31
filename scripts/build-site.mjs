@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import {
   cpSync,
   mkdirSync,
@@ -69,16 +70,37 @@ function walkFiles(directory, callback) {
 }
 
 function injectLegacyNavigation(outputDir) {
+  const navigationAsset = "assets/js/content-navigation.js";
+  const stylesheetAsset = "assets/css/content-site.css";
+  const versionedAsset = (assetPath) => {
+    const digest = createHash("sha256")
+      .update(readFileSync(join(outputDir, assetPath)))
+      .digest("hex")
+      .slice(0, 10);
+    return `/${assetPath}?v=${digest}`;
+  };
+  const navigationUrl = versionedAsset(navigationAsset);
+  const stylesheetUrl = versionedAsset(stylesheetAsset);
+
   walkFiles(outputDir, (filePath) => {
     if (!filePath.endsWith(".html")) return;
 
     const html = readFileSync(filePath, "utf8");
-    if (!html.includes('/assets/js/app.') || html.includes('/assets/js/content-navigation.js')) return;
+    if (!html.includes('/assets/js/app.')) return;
 
-    const enhanced = html.replace(
-      "</body>",
-      '    <script src="/assets/js/content-navigation.js" defer></script>\n  </body>',
-    );
+    let enhanced = html;
+    if (!enhanced.includes("/assets/css/content-site.css")) {
+      enhanced = enhanced.replace(
+        "</head>",
+        `    <link rel="stylesheet" href="${stylesheetUrl}">\n  </head>`,
+      );
+    }
+    if (!enhanced.includes("/assets/js/content-navigation.js")) {
+      enhanced = enhanced.replace(
+        "</body>",
+        `    <script src="${navigationUrl}" defer></script>\n  </body>`,
+      );
+    }
     writeFileSync(filePath, enhanced);
   });
 }

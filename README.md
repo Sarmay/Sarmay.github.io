@@ -70,7 +70,7 @@ Pages CMS 由 [`.pages.yml`](.pages.yml) 配置，文章保存在 `content/artic
 2. 保留并识别现有 6 篇历史文章。
 3. 校验 `content/articles/*.md` 的 frontmatter。
 4. 生成三语言文章总览、分类页和文章详情页。
-5. 给旧 VuePress 页面注入文章入口和分类页完整跳转逻辑。
+5. 给三语言首页加入最新文章，并给旧 VuePress 页面注入文章入口和分类页完整跳转逻辑。
 6. 输出 `articles.json` 和 `.nojekyll`，供 GitHub Pages 发布。
 
 正式输出位于 `dist/`，预览草稿输出位于 `dist-preview/`。这两个目录都被 Git 忽略，不应提交。
