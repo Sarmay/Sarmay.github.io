@@ -7,7 +7,7 @@
 }
 
 html[dir="rtl"] body {
-  font-family: "ALKATIP Basma Tom", "Noto Naskh Arabic", "Noto Sans Arabic", sans-serif;
+  font-family: "ALKATIP Basma Tom", "Noto Naskh Arabic", "Noto Sans Arabic", sans-serif !important;
   direction: rtl;
   text-align: right;
 }
