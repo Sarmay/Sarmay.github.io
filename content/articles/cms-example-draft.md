@@ -7,9 +7,8 @@ language: zh
 category: frontend
 tags: CMS, GitHub Pages
 translation_key: cms-example
-published: false
+published: true
 ---
-
 ## 编辑正文
 
 登录 Pages CMS 后可以直接编辑这篇草稿，也可以新建文章。保存后，CMS 会自动提交 Markdown 文件，GitHub Actions 会继续完成构建和部署。
@@ -24,3 +23,4 @@ published: false
 ```js
 console.log("文章发布流程已连接");
 ```
+
