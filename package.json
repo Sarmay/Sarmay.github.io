@@ -17,6 +17,6 @@
   "dependencies": {
     "gray-matter": "4.0.3",
     "js-yaml": "^4.3.0",
-    "markdown-it": "^14.3.0"
+    "markdown-it": "^14.3.3"
   }
 }
